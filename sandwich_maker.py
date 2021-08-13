@@ -21,11 +21,14 @@ prices = {'wheat': 10,
           'none': 0,
           }
 
+
 print('====SANDWICH MAKER====')
 
 print("Hi mam'sir, welcome to our restaurant. What's your order?")
 
+
 while True:
+          
     # Ask the customer for their sandwich choices.
     bread = pyip.inputMenu(['wheat', 'white', 'sourdough'],
                            'What type of bread do you want?\n')
@@ -50,6 +53,9 @@ while True:
     total_cost = (prices[bread] + prices[protein] + prices[cheese]
                   + prices[condiments]) * amount
 
+
+
+
     # Different depending on if customer wanted cheese.
     if not cheese == 'none':
         print(f"""To recount your order:
@@ -61,6 +67,9 @@ while True:
    {amount} {bread} sandwiches with {protein},
    topped with {condiments}.
    Total cost: {total_cost}.00 pesos.\n""")
+
+
+
 
     # Ask the customer if their order is right.
     right_order = pyip.inputYesNo('Is this the right order?\n')
